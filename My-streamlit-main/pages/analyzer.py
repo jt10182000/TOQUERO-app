@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-from nltk.corpus import names
-
+import os
 
 # Set up the title and description
 st.title("Toquero Feelings Analyzer :the_horns:")
@@ -15,9 +14,17 @@ Enter your current feeling in the text box below, and let's see what the sentime
 message = st.text_input("Tell me what you feel today:")
 
 # Load the trained Naive Bayes classifier from the saved file
-model_filename = './pages/ToquerosentimentAnalyzerTest_model.sav'
-with open(model_filename, 'rb') as file:
-    loaded_model = pickle.load(file)
+model_filename = 'My-streamlit-main/pages/ToquerosentimentAnalyzerTest_model.sav'
+
+def load_model():
+    if os.path.exists("My-streamlit-mai/pagesToquerosentimentAnalyzerTest_model.sav"):
+        with open(My-streamlit-mai/pagesToquerosentimentAnalyzerTest_model.sav, 'rb') as file:
+            return pickle.load(file)
+    else:
+        st.error(f"Model file '{"My-streamlit-mai/pagesToquerosentimentAnalyzerTest_model.sav"}' not found. Please check the file path or upload the model file.")
+        return None
+
+loaded_model = load_model()
 
 # Define function to extract features from the input message
 def word_features(words):
@@ -43,4 +50,5 @@ def classify_feeling():
         st.write("Please enter a feeling to analyze.")
 
 # Button to trigger the sentiment analysis
-st.button('Analyze Feeling', on_click=classify_feeling)
+if loaded_model:
+    st.button('Analyze Feeling', on_click=classify_feeling)
