@@ -14,14 +14,14 @@ Enter your current feeling in the text box below, and let's see what the sentime
 message = st.text_input("Tell me what you feel today:")
 
 # Load the trained Naive Bayes classifier from the saved file
-model_filename = 'My-streamlit-main/pages/ToquerosentimentAnalyzerTest_model.sav'
+model_filename = 'My-streamlit-main/pages/sentimentAnalyzerTest_model.sav'
 
 def load_model():
-    if os.path.exists(My-streamlit-main/pages/ToquerosentimentAnalyzerTest_model.sav):
+    if os.path.exists(My-streamlit-main/pages/sentimentAnalyzerTest_model.sav):
         with open(model_filename, 'rb') as file:
             return pickle.load(file)
     else:
-        st.error(f"Model file '{My-streamlit-main/pages/ToquerosentimentAnalyzerTest_model.sav}' not found. Please check the file path or upload the model file.")
+        st.error(f"Model file '{My-streamlit-main/pages/sentimentAnalyzerTest_model.sav}' not found. Please check the file path or upload the model file.")
         return None
 
 loaded_model = load_model()
