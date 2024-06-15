@@ -22,7 +22,7 @@ message = st.text_input("Tell me what you feel today:")
 
 # Load the trained Naive Bayes classifier from the saved file
 model_filename = 'My-streamlit-main/pages/ToquerosentimentAnalyzerTest_model.sav'
-with open(My-streamlit-main/pages/ToquerosentimentAnalyzerTest_model.sav, 'rb') as file:
+with open(model_filename, 'rb') as file:
     loaded_model = pickle.load(file)
 
 # Define function to extract features from the input message
