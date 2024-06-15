@@ -7,7 +7,7 @@ st.title("About Jessa 👦")
 st.title("🖼️Self Gallery")
 
 
-image_paths = ["./pic/M4.jpg", "./pic/M1.jpg", "./pic/M2.jpg"]
+image_paths = ["My-streamlit-main/pic/M4.jpg", "My-streamlit-main/pic/M1.jpg", "Mys-streamlit-main/pic/M2.jpg"]
 
 
 cols = st.columns(len(image_paths))
