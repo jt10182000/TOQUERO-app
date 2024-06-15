@@ -11,7 +11,7 @@ from nltk.corpus import names
 
 
 # Set up the title and description
-st.title("ToquEmotions Analyzer :the_horns:")
+st.title("ToquEmotions Analyzer:")
 st.markdown("""
 Welcome to Toquero Streamlit app for analyzing different feelings.
 Enter your current feeling in the text box below, and let's see what the sentiment analyzer says!
@@ -21,7 +21,7 @@ Enter your current feeling in the text box below, and let's see what the sentime
 message = st.text_input("Tell me what you feel today:")
 
 # Load the trained Naive Bayes classifier from the saved file
-model_filename = './pages/ToquerosentimentAnalyzerTest_model.sav'
+model_filename = 'My-streamlit-main/pages/sentimentAnalyzerTest_model.sav'
 with open(model_filename, 'rb') as file:
     loaded_model = pickle.load(file)
 
