@@ -22,7 +22,7 @@ dissatisfaction. This tool is widely used in customer feedback analysis, social 
     """, unsafe_allow_html=True)
 
 st.header('Dog Breed Image Classification')
-st.image("./pic/image.png")
+st.image("My-streamlit-main/pic/ds.png")
 
 with st.expander("Dog Breed Image Classification Project"):
     st.markdown("""
