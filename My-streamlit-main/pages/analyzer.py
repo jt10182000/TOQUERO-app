@@ -4,7 +4,7 @@ import pickle
 import os
 
 # Set up the title and description
-st.title("Toquero Feelings Analyzer :the_horns:")
+st.title("Toquero Feelings Analyzer:")
 st.markdown("""
 Welcome to Toquero's Streamlit app for analyzing different feelings.
 Enter your current feeling in the text box below, and let's see what the sentiment analyzer says!
